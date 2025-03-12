@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #6a0dad;
+    color: white;
+    padding-top: 70px;
+}
+
+/* Навігація */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4b0082;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(211, 182, 215);
+    font-size: 18px;
+}
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #58456c;
+    color: rgb(211, 182, 215);
+    font-weight: bold;
+    margin: 8% auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border-radius: 12px;
+    border:2px solid white;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+.author-img{
+    max-width: 400px;
+    /* height: auto; */
+    border:2px solid #8a2be2;
+    border-radius: 50% !important;
+}
+
+/* Основний контент */
+.task-block {
+    background: #8a2be2;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+input{
+    border-radius: 10px;
+    padding: 4px;
+}
+select{
+    padding: 4px;
+    border-radius: 15px;
+
+}
+
+button{
+    background:#4b0082;
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 6px;
+    transition: .5s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button:hover{
+    background-color: #182378;
+    color: #19ea5b;
+    box-shadow: 2px 2px 30px #333;
+    cursor: pointer;
+}
+#logo{
+    cursor: pointer;
+    border-radius: 1000px;
+    width: 3vw;
+}
+#pb{
+    border-radius: 6px;
+    width: 30vw;
+}
