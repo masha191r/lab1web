@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 1 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навігаційна панель  . Не працює , але для виду згодиться-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Лого" id="logo">
+            </div>
+            <!-- Основна навігація -->
+            <ul class="nav-links">
+                <li><a href="#">Конвертація</a></li>
+                <li><a href="#">Найдовше слово</a></li>
+                <li><a href="#">Генератор пароля</a></li>
+                <li><a href="#">Підрахунок букв</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Модальне вікно імпортоване з w3schools -->
+    <div id="authorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="pb" src="seller.PNG" alt="Автор" class="author-img">
+            <p>Рудейчук Марія <br> Студентка 201 групи</p>
+        </div>
+    </div>
+
+    <!-- Основний контент -->
+    <main>
+
+        <!-- Перше завдання , конвертація в інші міри довжини-->
+        <section id="task1" class="task-block">
+            <h2>Конвертація величин</h2>
+            <label>Введіть значення:</label>
+            <input type="number" id="value">
+            <select id="fromUnit">
+                <option value="km">Кілометри</option>
+                <option value="m">Метри</option>
+                <option value="cm">Сантиметри</option>
+                <option value="mm">Міліметри</option>
+            </select>
+            <label>Конвертувати у:</label>
+            <select id="toUnit">
+                <option value="km">Кілометри</option>
+                <option value="m">Метри</option>
+                <option value="cm">Сантиметри</option>
+                <option value="mm">Міліметри</option>
+            </select>
+            <!-- Функція , при натисканні яка конвертує -->
+            <button onclick="convert()">Конвертувати</button>
+            <p id="result1"></p>
+        </section>
+
+        <!-- Друге завдання - Знайти найдовше слово -->
+        <section id="task2" class="task-block">
+            <h2>Найдовше слово</h2>
+            <input type="text" id="sentence" placeholder="Введіть речення">
+            <!-- Функція , яка при натисканні шукає найдовше слово -->
+            <button onclick="findLongestWord()">Знайти</button>
+            <p id="result2"></p>
+        </section>
+
+        <!-- Третє завдання  Генератор рандомного паролю -->
+        <section id="task3" class="task-block">
+            <h2>Генератор пароля</h2>
+            <label>Цифри:</label>
+            <input type="number" id="numCount">
+            <label>Букви:</label>
+            <input type="number" id="letterCount">
+            <label>Спец. символи:</label>
+            <input type="number" id="symbolCount">
+            <!-- Функція яка при натисканні генерує -->
+            <button onclick="generatePassword()">Згенерувати</button>
+            <p id="result3"></p>
+        </section>
+
+        <!-- Рахунок букв у реченні (саме заданої букви) -->
+        <section id="task4" class="task-block">
+            <h2>Підрахунок букв</h2>
+            <input type="text" id="textInput" placeholder="Введіть речення">
+            <input type="text" id="charInput" maxlength="1" placeholder="Літера">
+            <!-- Функція яка при натисканні рахує -->
+            <button onclick="countLetter()">Порахувати</button> 
+            <p id="result4"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
